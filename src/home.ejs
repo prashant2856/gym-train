@@ -15,8 +15,6 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
     crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.typekit.net/twx2phd.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -111,24 +109,28 @@
                      <h2 class="display-4 pro-title">WHY CHOOSE US</h2>
                      <p class="pro-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br>invidunt ut labore et dolore magna aliquyam.</p>
                   </div>
-                  <div class="row">
-                     <div class="col-md-3">
+                  <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                        
+                     <div class="col-md-3 swiper-slide">
                          <div class="cat-cmnbox">
                             <h4 class="cat-title">TOPS</h4>
                             <img src="images/cat1.png" alt="tops-image">
                             <p class="cat-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
                          </div>
                      </div>
-
-                     <div class="col-md-3">
+                     
+                     
+                     <div class="col-md-3 swiper-slide">
                         <div class="cat-cmnbox">
                            <h4 class="cat-title">BOTTOMS</h4>
                            <img src="images/cat2.png" alt="bottoms-image">
                            <p class="cat-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
                         </div>
                     </div>
-
-                    <div class="col-md-3">
+                    
+                
+                    <div class="col-md-3 swiper-slide">
                      <div class="cat-cmnbox">
                         <h4 class="cat-title">HOODIES AND JACKETS</h4>
                         <img src="images/cat3.png" alt="jacket-image">
@@ -136,15 +138,16 @@
                      </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 swiper-slide">
                      <div class="cat-cmnbox">
                         <h4 class="cat-title">ACCESSORIES</h4>
                         <img src="images/cat4.png" alt="accessories-image">   
                         <p class="cat-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
                      </div>
                     </div>
-
+                    </div>
                   </div>
+                  <div class="swiper-pagination th-swiper-pg"></div>
              </div>
           </section>
 
@@ -241,35 +244,196 @@
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br>invidunt ut labore et dolore magna aliquyam.</p>
              </div>
              <div class="container">
-                <div class="img-thumb">
-                     <div class="img-series1">
-                         <img src="images/work11.jpg" alt="series1">
+                <div class="row">
+                   <div class="col-md-6">
+                      <div class="video-block">
+                         <img src="images/work11.jpg" alt="video1" class="img-fluid">
+                      </div>
+                      <div class="video-info">
+                        
+                            <h6 class="exercise1">EXERCISE NAME | S-2, E-4</h6>
+                            <p>Lorem Ipsum Dolor Sit Amet</p>
+                        
+                      </div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="video-block">
+                        <img src="images/work22.jpg" alt="vidoe2" class="img-fluid">
+                      </div>
+                      <div class="video-info">
+                        
+                           <h6 class="exercise1">EXERCISE NAME | S-2, E-4</h6>
+                           <p>Lorem Ipsum Dolor Sit Amet</p>
+                       
                      </div>
-                     <div class="img-series2">
-                        <img src="images/work22.jpg" alt="series2">
+                   </div>
+                </div>
+             </div>
+          </section>
+
+          <section class="product-detail">
+             <div class="product-bg">
+                <div class="container">
+                   <div class="row">
+                      <div class="col-md-6">
+                         <div class="pro-title">
+                            <h2 class="display-4 pro-name">GOLD WHEY</h2>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br>sed diam nonumy eirmod tempor invidunt ut labore et<br>dolore magna aliquyam .</p>
+                            <button class="btnshop">SHOP NOW</button>
+                         </div>
+                      </div>
+                      <div class="col-md-6">
+                         <div class="brand-img"></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>
+
+          <section class="cart-detail">
+             <div class="container">
+                <div class="row">
+                   <div class="col-md-6">
+                      <div class="pro-image"></div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="cart-info">
+                         <h6 class="cart-title">BEST SELLING PRODUCT</h6>
+                         <h2 class="display-4 cart-brand">WHEY PROTEIN</h2>
+                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna,<br>aliquyam erat, sed diam voluptua.</p>
+                         <div class="cart-weight">
+                            <span class="weight-cmn">2.27 KG</span>
+                            <span class="weight-cmn active">4.54 KG</span>
+                            <span class="weight-cmn">7.05 KG</span>
+                         </div>
+                         <div>
+                           <h2 class="display-4 cart-price">$10</h2> 
+                           <div>
+                                 <button class="btncart">ADD TO CART</button>
+                                 <button class="btnwish">ADD WISHLIST</button>
+                           </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>  
+          </section>
+
+          <section class="blog">
+             <div class="blog-info">
+                <h2 class="display-4 blog-title">Our Latest Blog</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br>invidunt ut labore et dolore magna aliquyam.</p>
+             </div>
+             <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="cmn-blog">
+                        <img src="images/blog1.jpg" alt="blog-image1">
+                        <div class="icon">
+                          <span><a href="#"><i class="far fa-user"></i></a>ADMIN</span>
+                          <span><a href="#"><i class="fal fa-calendar"></i></a>23 JAN</span>
+                          <span><a href="#"><i class="fal fa-comments-alt"></i></a>12 COMMENTS</span>
+                        </div>
+                        <h4>LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING</h4>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                        <button class="readblog">READ MORE</button>
                      </div>
-               </div>    
-            </div>         
+                  </div>
+
+                  <div class="col-md-4">
+                     <div class="cmn-blog">
+                        <img src="images/blog2.jpg" alt="blog-image2">
+                        <div class="icon">
+                           <span><a href="#"><i class="far fa-user"></i></a>ADMIN</span>
+                           <span><a href="#"><i class="fal fa-calendar"></i></a>23 JAN</span>
+                           <span><a href="#"><i class="fal fa-comments-alt"></i></a>12 COMMENTS</span>
+                         </div>
+                         <h4>LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING</h4>
+                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                         <button class="readblog">READ MORE</button>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4">
+                     <div class="cmn-blog">
+                        <img src="images/blog3.jpg" alt="blog-image3">
+                        <div class="icon">
+                           <span><a href="#"><i class="far fa-user"></i></a>ADMIN</span>
+                           <span><a href="#"><i class="fal fa-calendar"></i></a>23 JAN</span>
+                           <span><a href="#"><i class="fal fa-comments-alt"></i></a>12 COMMENTS</span>
+                         </div>
+                         <h4>LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING</h4>
+                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                         <button class="readblog">READ MORE</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <span class="view">VIEW MORE</span>
+               </div>
+             </div>
+          </section>
+
+          <section class="newsletter">
+             <div class="news-box-bg">
+                <div class="container">
+                   <div class="col-md-12">
+                      <div class="news-box">
+                         <div class="letter-bg">
+                            <div class="col-md-6">
+                               <div>
+                                  <h2 class="display-4 news-title">LETS START!</h2>
+                                  <h6 class="subscribe">SUBSCRIBE TO OUR NEWSLETTER</h6>
+                                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="subscribe-box">
+                                  <div class="mb-3">
+                                    <input type="text" class="form-control subname" id="exampleFormControlInput1" placeholder="Name">
+                                    <input type="email" class="form-control subemail" id="exampleFormControlInput1" placeholder="Email">
+                                  </div>
+                                 <button class="btnsub">SUBSCRIBE</button>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
           </section>
 
         </main>
 
         <% include /src/include/footer.ejs %>
 
-        <script src="js/home.js"></script>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="js/home.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <!-- <script>
+    <script>
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: 3,
+        spaceBetween: 10,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
       });
-    </script> -->
+    </script>
 
 </body>
 </html>
