@@ -24,7 +24,8 @@
         <main id="th-page-index">
 
           <section class="home-banner">
-               <div class="bannerimg"></div>
+               <!-- <div class="bannerimg"></div> -->
+               <img src="images/home-banner.jpg" alt="home-banner" class="img-fluid">
           </section>
 
           <section class="work-detail">
@@ -179,18 +180,20 @@
                       </div>
                    </div>
                    <div class="col-md-6">
-                      <div style="position: relative; left: 0; top: 0;">
+                   <div class="groupimage-block">
+                      <div class="groupimg">
                          <img src="images/group-11.png" alt="gym-image2" class="group1">
                          <img src="images/group-1.png" alt="gym-image1" class="group2">
                          <img src="images/group22.png" alt="gym-image3" class="group3">
                          <img src="images/group33.png" alt="gym-image4" class="group4">
+                      </div>
                       </div>
                    </div>
                 </div>
              </div>
           </section>
 
-          <section class="video">
+          <section class="gym-cat">
              <div class="container">
                 <div class="row">
                    <div class="col-md-3">
@@ -230,12 +233,19 @@
                      </div>
                   </div>
                 </div>
-                <!-- <div class="row">
-                   <div class="col-md-12 video-img">
-                         <img src="images/videobg.png" alt="video1">
-                   </div>
-                </div> -->
              </div>
+          </section>
+
+          <section class="video">
+           <div class="container">
+            <div class="row">
+               <div class="col-md-12 video-img">
+                     <div class="videoback">
+                        <img src="images/videobg.png" alt="video1" class="img-fluid">
+                     </div>
+               </div>
+            </div>
+            </div>
           </section>
 
           <section class="training-section">
@@ -283,7 +293,8 @@
                          </div>
                       </div>
                       <div class="col-md-6">
-                         <div class="brand-img"></div>
+                         <!-- <div class="brand-img"></div> -->
+                         <img src="images/brand.png" alt="brand" class="img-fluid">
                       </div>
                    </div>
                 </div>
@@ -294,7 +305,8 @@
              <div class="container">
                 <div class="row">
                    <div class="col-md-6">
-                      <div class="pro-image"></div>
+                      <!-- <div class="pro-image"></div> -->
+                      <img src="images/pro1.png" alt="pro1" class="img-fluid">
                    </div>
                    <div class="col-md-6">
                       <div class="cart-info">
@@ -328,11 +340,16 @@
                <div class="row">
                   <div class="col-md-4">
                      <div class="cmn-blog">
-                        <img src="images/blog1.jpg" alt="blog-image1">
+                        <div class="blogimg">
+                           <img src="images/blog1.jpg" alt="blog-image1">
+                        </div>
                         <div class="icon">
-                          <span><a href="#"><i class="far fa-user"></i></a>ADMIN</span>
-                          <span><a href="#"><i class="fal fa-calendar"></i></a>23 JAN</span>
-                          <span><a href="#"><i class="fal fa-comments-alt"></i></a>12 COMMENTS</span>
+                          <span><a href="#"><i class="far fa-user"></i></a></span>
+                          <p>ADMIN</p>
+                          <span><a href="#"><i class="fal fa-calendar"></i></a></span>
+                          <p>23 JAN</p>
+                          <span><a href="#"><i class="fal fa-comments-alt"></i></a></span>
+                          <p>12 COMMENTS</p>
                         </div>
                         <h4>LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING</h4>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
@@ -342,11 +359,16 @@
 
                   <div class="col-md-4">
                      <div class="cmn-blog">
-                        <img src="images/blog2.jpg" alt="blog-image2">
+                        <div class="blogimg">
+                           <img src="images/blog2.jpg" alt="blog-image2">
+                        </div>
                         <div class="icon">
-                           <span><a href="#"><i class="far fa-user"></i></a>ADMIN</span>
-                           <span><a href="#"><i class="fal fa-calendar"></i></a>23 JAN</span>
-                           <span><a href="#"><i class="fal fa-comments-alt"></i></a>12 COMMENTS</span>
+                           <span><a href="#"><i class="far fa-user"></i></a></span>
+                           <p>ADMIN</p>
+                           <span><a href="#"><i class="fal fa-calendar"></i></a></span>
+                           <p>23 JAN</p>
+                           <span><a href="#"><i class="fal fa-comments-alt"></i></a></span>
+                           <p>12 COMMENTS</p>
                          </div>
                          <h4>LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING</h4>
                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
@@ -356,7 +378,9 @@
 
                   <div class="col-md-4">
                      <div class="cmn-blog">
-                        <img src="images/blog3.jpg" alt="blog-image3">
+                        <div class="blogimg">
+                           <img src="images/blog3.jpg" alt="blog-image3">
+                        </div>
                         <div class="icon">
                            <span><a href="#"><i class="far fa-user"></i></a>ADMIN</span>
                            <span><a href="#"><i class="fal fa-calendar"></i></a>23 JAN</span>
@@ -412,7 +436,7 @@
 
     <script>
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 10,
         pagination: {
           el: ".swiper-pagination",
@@ -424,7 +448,7 @@
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 40,
           },
           1024: {

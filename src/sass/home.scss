@@ -20,6 +20,10 @@
 
 @import "swiper/css/bundle";
 
+body{
+  overflow-x: hidden;
+}
+
 #th-page-index {
 /* Banner Image start*/  
   .home-banner {
@@ -43,8 +47,15 @@
       overflow: hidden;
       position: relative;
       .box-content {
-        max-width: 254px;
         text-align: center;
+        max-width: 254px;
+        @include media-breakpoint-only(sm){
+          text-align: center;
+        }
+        @include media-breakpoint-up(md){
+          max-width: 254px;
+          text-align: center;
+        }
         &:after {
           content: "";
           position: absolute;
@@ -112,7 +123,11 @@
 /* About Gym work Section Start*/
   .aboutgym{
     .about-content{
-      padding-top: 133px;
+      padding-top: 25px;
+      @include media-breakpoint-up(sm){
+        padding-top: 133px;  
+      }
+      
       h4{
         color: #5E5E5E;
         text-transform: uppercase;
@@ -134,20 +149,32 @@
         }  
       }
       p{
-        padding-top: 13px;
+        font-size: 18px;
+        font-family: futura-pt,sans-serif;
+        font-style: normal;
+        font-weight: 500;
         color: #202020;
+        @include media-breakpoint-up(sm){
+        padding-top: 13px;
         font-family: futura-pt,sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 22px;
         line-height: 24px;
+        }
       }
     }
     .about-details{
-      padding-top: 55px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start
+        padding-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      @include media-breakpoint-up(sm){
+        padding-top: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start
+      }
       img{
         width: 62px;
         height: 40px;
@@ -159,9 +186,13 @@
         font-weight: 600;
       }
       p{
+        font-size: 16px;
         color:#707070;
+        font-weight: bold;
+        @include media-breakpoint-up(sm){
         font-size:20px;
         font-weight: bold;
+        }
       }
      }
     }
@@ -181,22 +212,38 @@
           font-weight: 600;
         }
       p{
-        color:#707070;
-        font-size:20px;
-        font-weight: bold;
+          font-size: 16px;
+          color:#707070;
+          font-weight: bold;
+        @include media-breakpoint-up(sm){
+          font-size:20px;
+          font-weight: bold;
+        }
        }   
       }
     }
     .aboutinfo{
-      padding-top: 100px;
+        padding-top: 50px;
+      @include media-breakpoint-up(sm){
+        padding-top: 100px;
+      }
       .about-image{
+        max-width: 623px;
+        width: 100%;
+        height: 322px;
+        background-image: url("../images/about-logo.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; 
+        @include media-breakpoint-up(sm){
         max-width: 623px;
         width: 100%;
         height: 686px;
         background-image: url("../images/about-logo.png");
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; 
+        }
       }
     }
   }
@@ -206,13 +253,36 @@
 
 .gym-profile{
    background-color: black;
-   padding-top: 122px;
+   padding-top: 40px;
    padding-bottom: 289px;
+   @include media-breakpoint-up(sm){
+    padding-top: 122px;
+    padding-bottom: 289px;
+   }
   .profile-box{
+    .pro-title{
+      position: relative; 
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      &::after{
+       content: "";
+       position: absolute;
+       background-color: $primary;
+       height: 3px;
+       width: 150px;   
+       left: 28%;
+       bottom: 0;
+        }
+       }  
+   @include media-breakpoint-up(sm){
   .pro-title{
    position: relative; 
    color: #FFFFFF;
    text-transform: uppercase;
+   font-size: 44px;
    font-weight: bold;
    text-align: center;
    &::after{
@@ -223,13 +293,18 @@
     width: 186px;   
     left: 45%;
     bottom: 0;
+     }
     }
-   }
+   } 
    .pro-description{
-     margin-bottom: 40px;
-     color: #D1D1D1;
-     font-size: 20px;
-     text-align: center;
+      font-size: 16px;
+      color: #D1D1D1;
+      text-align: center;
+     @include media-breakpoint-up(sm){
+      margin-bottom: 40px;
+      font-size: 20px;
+      text-align: center;
+     }
    } 
   } 
   .cat-cmnbox{
@@ -252,7 +327,12 @@
     .cat-text{
       text-align: center;
       color:#D1D1D1;
+      font-size: 16px;
+      @include media-breakpoint-up(sm){
+      text-align: center;
+      color:#D1D1D1;
       font-size: 18px;
+      }
     }
   }
   .th-swiper-pg{
@@ -271,7 +351,11 @@
  }
   .gym-port-section{
     overflow: hidden;
-    margin-top: -108px;
+    margin-top: -200px;
+    @include media-breakpoint-up(sm){
+      overflow: hidden;
+      margin-top: -108px;
+    }
     .work-image{
       max-width: 428px;
       width: 100%;
@@ -377,42 +461,69 @@
        font-weight: 500;
      }
     }
-    .group1{
-     position: relative;
-     top:111px;
-     left:0;
-     z-index: 1;
+    .groupimage-block{
+        width: 100%;
+        height: 100%;
+        position: relative; 
+      .groupimg{
+        width: 100%;
+        height: 100%;
+        position: relative; 
+        left: 0;
+        top: 0;
+        
+        img{
+          
+          &.group1{
+            position: relative;
+            top:111px;
+            left:0;
+            z-index: 1;
+           }
+           &.group2{
+            position: absolute;
+            top:-35px;
+            left:185px;
+            z-index: 2;
+           }
+           &.group3{
+             position: relative;
+             top:140px;
+             left:95px;
+             z-index: 1;
+           }
+           &.group4{
+             position: relative;
+             top:20px;
+             left:150px;
+             z-index: -1;
+           }
+        }
+       
+      } 
     }
-    .group2{
-     position: absolute;
-     top:-35px;
-     left:185px;
-     z-index: 2;
-    }
-    .group3{
-      position: relative;
-      top:140px;
-      left:95px;
-      z-index: 1;
-    }
-    .group4{
-      position: relative;
-      top:20px;
-      left:150px;
-      z-index: -1;
-    }
+   
   }
-  .video{
+  .gym-cat{
    background-color: #000000;
-   height: 394px;  
+   height: 394px;
    .cmnbox-icon{
     display: flex;
     align-items: center;
     justify-content: center; 
-     padding-top: 61px;
+    @include media-breakpoint-up(sm) {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 61px;
+    }
      img{
-       width: 68px;
-       height: 66px;
+        width: 50px;
+        height: 45px;
+       @include media-breakpoint-up(sm){
+        width: 68px;
+        height: 66px;
+       }
      }
    .cmnbox-info{
     padding-left: 12px;   
@@ -422,19 +533,35 @@
      font-weight: bold;    
      }
      .cmnbox-text{
-       color:#FFFFFF;
-       font-size: 18px;
-       text-transform: uppercase;
+      color:#FFFFFF;
+      font-size: 15px;
+       @include media-breakpoint-up(sm){
+        font-size: 18px;
+        text-transform: uppercase;
+       }
      }
     }  
    }
+  }
+
+  .video{
     .video-img{
-      margin:124px 0 0 79px;
+      @include media-breakpoint-up(sm){
+        margin:124px 0 0 79px;
+      }
+      
+    .videoback{
+     @include media-breakpoint-up(sm) {
+      position: relative;
+      bottom: 240px;
+      left:223px; 
+     }
+    }  
     }
   }
 
   .training-section{
-    padding-top: 190px;
+    padding-top: 50px;
     .training-header{
       .title-text{
         position: relative;
@@ -447,22 +574,50 @@
         position: absolute;
         background-color: $primary;
         height: 5px;
-        width: 186px;   
-        left: 44%;
+        width: 150px;   
+        left: 28%;
         bottom: 0;   
         }
       }
+      @include media-breakpoint-up(sm){
+        .title-text{
+          position: relative;
+          color:#000000;
+          font-family: futura-pt,sans-serif;
+          font-weight: bold;
+          text-align: center;
+          &::after{
+          content: "";
+          position: absolute;
+          background-color: $primary;
+          height: 5px;
+          width: 186px;   
+          left: 44%;
+          bottom: 0;   
+          }
+        }
+      }
+
       p{
+        margin-bottom: 60px;
+        color:#7E7E7E;
+        font-size: 16px;
+        font-family: futura-pt,sans-serif;
+        font-weight: 500; 
+        text-align: center;
+        @include media-breakpoint-up(sm){
         margin-bottom: 60px;
         color:#7E7E7E;
         font-size: 20px;
         font-family: futura-pt,sans-serif;
         font-weight: 500; 
         text-align: center;
+        }
       }
     }
     
     .video-block{
+      padding-top: 10px;
       img{
       width: 100%;  
       height: 363px;
@@ -478,7 +633,6 @@
     .video-info{
       text-align: center;
       background-color: #FFFFFF;
-      border: 1px solid #7E7E7E;
       border-radius: 15px 15px 0 0;
       max-width: 371px;
       width: 100%;
@@ -488,6 +642,7 @@
       margin-top: -40px;
       background-color: #FFFFFF;
       position: relative;
+      box-shadow: 0px 8px 45px #0000001F;
       
       .exercise1{
         text-transform: uppercase;
@@ -522,13 +677,15 @@
     }
   }
   .product-detail{
-    padding-top: 230px;
+    padding-top: 30px;
+    @include media-breakpoint-up(sm){
+      padding-top: 230px;
+    }
     .product-bg{
-      background-image: url("../images/productbg.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 570px;
+        background-image: url("../images/productbg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
      .pro-title{
         padding-top: 119px;
      .pro-name{
@@ -584,7 +741,10 @@
   }
 
   .cart-detail{
-    padding-top: 230px;
+    padding-top: 50px;
+    @include media-breakpoint-up(sm){
+      padding-top: 230px;
+    }
     .pro-image{ 
       height: 570px;
       background-image: url("../images/pro1.png");
@@ -593,7 +753,11 @@
       background-repeat: no-repeat;
     }
     .cart-info{
-      padding-top: 110px;
+      padding-top: 50px;
+      @include media-breakpoint-up(sm){
+        padding-top: 110px;
+      }
+      
      .cart-title{
        color:#5E5E5E;
        text-transform: uppercase;
@@ -617,11 +781,19 @@
        }
      }
      p{
-       padding-top: 25px;
-       color: #7E7E7E;
-       font-size: 20px; 
-       font-family: futura-pt,sans-serif;
-       font-weight: normal;
+      padding-top: 25px;
+      color: #7E7E7E;
+      font-size: 16px; 
+      font-family: futura-pt,sans-serif;
+      font-weight: normal;
+      text-align: center;
+       @include media-breakpoint-up(sm){
+        padding-top: 25px;
+        color: #7E7E7E;
+        font-size: 20px; 
+        font-family: futura-pt,sans-serif;
+        font-weight: normal; 
+       }
      }
      .cart-weight{
        display: flex;
@@ -632,22 +804,44 @@
         background-color: #ECECEC;
         border-radius: 40px 40px 40px 40px;
         display: block;
-        width: 119px;
-        height: 38px;
-        font-size: 15px;
+        width: 110px;
+        height: 30px;
+        font-size: 9px;
         padding: 10px 29px;
         color:#AEAEAE;
+        @include media-breakpoint-up(sm){
+          background-color: #ECECEC;
+          border-radius: 40px 40px 40px 40px;
+          display: block;
+          width: 119px;
+          height: 38px;
+          font-size: 15px;
+          padding: 10px 29px;
+          color:#AEAEAE;  
+        }
         &.active{
         background-color: #FFFFFF;
         border-radius: 40px 40px 40px 40px;
         display: block;
-        width: 119px;
-        height: 38px;
-        font-size: 14px;
+        width: 110px;
+        height: 30px;
+        font-size: 9px;
         padding: 10px 29px;
         border: 1px solid #000000;
         color:#000000; 
         margin-left: 15px;
+        @include media-breakpoint-up(sm) {
+          background-color: #FFFFFF;
+          border-radius: 40px 40px 40px 40px;
+          display: block;
+          width: 119px;
+          height: 38px;
+          font-size: 14px;
+          padding: 10px 29px;
+          border: 1px solid #000000;
+          color:#000000; 
+          margin-left: 15px;
+        } 
         }
        }
      }
@@ -690,12 +884,17 @@
         font-size: 20px;
         width: 100%;
         padding-left: 15px;
-        margin-left:20px;
+        @include media-breakpoint-up(sm){
+          margin-left:20px;
+        }
     }
     }
   }
   .blog{
-    padding-top: 124px;
+    padding-top: 50px;
+    @include media-breakpoint-up(sm){
+      padding-top: 124px;
+    }
     .blog-info{
       .blog-title{
         position: relative;
@@ -708,30 +907,59 @@
         position: absolute;
         background-color: $primary;
         height: 5px;
-        width: 186px;   
-        left: 44%;
+        width: 150px;   
+        left: 21%;
         bottom: 0;    
       }  
       }
+      @include media-breakpoint-up(sm){
+        .blog-title{
+          position: relative;
+          text-align: center;
+          text-transform: capitalize;
+          font-family: futura-pt bold,sans-serif;
+          font-weight: bold;
+        &::after{
+          content: "";
+          position: absolute;
+          background-color: $primary;
+          height: 5px;
+          width: 186px;   
+          left: 44%;
+          bottom: 0;    
+        }  
+       }
+      }
+ 
       p{
         color: #7E7E7E;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        @include media-breakpoint-up(sm){
         font-size: 20px;
         font-weight: 500;
         text-align: center;
+        }
       }
     }
     .cmn-blog{
       padding-top: 50px;
+      .blogimg{
+        height: 280px;
       img{
-        max-width: 407px;
         width: 100%;
-        height: 252px;
+        height: 100%;
         border-radius: 20px 20px 20px 20px;
         box-shadow: 0px 6px 25px #0000000F;
-        opacity: 1;
+        object-fit: cover;
+       }
       }
       .icon{
         padding-top: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         span{
           color: #7E7E7E;
           font-size:14px;
@@ -749,11 +977,31 @@
       p{
         padding-top: 17px;
         color: #7E7E7E;
+        font-size: 15px;
+        font-family: futura-pt normal,sans-serif;
+        font-weight: 500;
+        @include media-breakpoint-up(sm){
+        padding-top: 17px;
         font-size: 18px;
         font-family: futura-pt normal,sans-serif;
         font-weight: 500;
+        }
       }
-      .readblog{  
+      .readblog{
+        border: 1px solid #000000;
+        color: #000000;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 0;
+        margin-top: 27px;
+        text-shadow: none;
+        text-transform: uppercase;
+        max-width: 145px;
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        width: 100%;
+        @include media-breakpoint-up(sm){
         border: 1px solid #000000;
         color: #000000;
         text-align: center;
@@ -766,7 +1014,8 @@
         width: 100%;
         height: 56px;
         font-size: 16px;
-        width: 100%;
+        width: 100%;  
+        }  
       }
     }
     .view{
@@ -779,29 +1028,39 @@
     }
   }
   .newsletter{
-    padding-top: 199px;
+    padding-top: 105px;
+    @include media-breakpoint-up(sm){
+      padding-top: 199px;
+    }
     .news-box-bg{
       background-color: #EEEEEE;
-      height: 417px;
+      //height: 417px;
     .news-box{
-      height: 427px;
+      //height: 427px;
       background-color: $primary;
       box-shadow: 0px 15px 45px #00000026;
       border-radius:40px 40px 40px 40px;
       opacity: 1;
       position: relative;
-      bottom: 100px;
+      padding: 30px;
+      bottom: 75px;
     .letter-bg{
-      display: flex;
-      justify-content: space-evenly;
-      height: 475px;
       opacity: 0.8;
       background-image: url("../images/news.png");
       background-size: contain;
       background-position: left;
       background-repeat: no-repeat;
+      @include media-breakpoint-up(sm){
+        display: flex;
+        justify-content: space-evenly;
+        opacity: 0.8;
+        background-image: url("../images/news.png");
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+      }
       .news-title{
-        padding: 86px 0 0 87px;
+        //padding: 86px 0 0 87px;
         color:#FFFFFF;
         text-transform: uppercase;
         font-family: futura-pt bold,sans-serif;
@@ -813,16 +1072,16 @@
         text-transform: uppercase;
         font-family: futura-pt normal,sans-serif;
         font-weight: 500;
-        padding-left: 87px;
+        //padding-left: 87px;
       }
       p{
-        padding: 25px 0 0 87px;
+        //padding: 25px 0 0 87px;
         color:#FFFFFF;
         font-size:18px;
         font-family: futura-pt normal,sans-serif;
       }
       .subscribe-box{
-        padding: 100px 0 0 80px;
+        //padding: 100px 0 0 80px;
         .subname{
           border-radius: 0;
           background-color: #FFFFFF;
@@ -841,15 +1100,15 @@
           height: 58px;
         }
         .btnsub{
-        border: 1px solid #000000;
-        color: #000000;
+        background-color: #000000;
+        color: #FFFFFF;
         text-align: center;
         text-decoration: none;
         border-radius: 0;
         margin-top: 27px;
         text-shadow: none;
         text-transform: uppercase;
-        max-width: 196px;
+        max-width: 438px;
         width: 100%;
         height: 56px;
         font-size: 16px;
