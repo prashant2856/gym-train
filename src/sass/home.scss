@@ -230,7 +230,7 @@ body{
       .about-image{
         max-width: 623px;
         width: 100%;
-        height: 322px;
+        height: 321px;
         background-image: url("../images/about-logo.png");
         background-size: contain;
         background-position: center;
@@ -471,32 +471,62 @@ body{
         position: relative; 
         left: 0;
         top: 0;
-        
         img{
-          
+          position: relative;
+          @include media-breakpoint-up(lg){
+            width: 180px;
+          }
+          @include media-breakpoint-up(xl){
+            width: auto;
+            max-width: 100%;
+          }
           &.group1{
-            position: relative;
-            top:111px;
-            left:0;
             z-index: 1;
+            @include media-breakpoint-up(lg){
+              top:130px;
+              left:10px;
+            }
+            @include media-breakpoint-up(xl){
+              top:111px;
+              left:0;
+            }
+
            }
            &.group2{
             position: absolute;
-            top:-35px;
-            left:185px;
             z-index: 2;
+            @include media-breakpoint-up(lg){
+            top:-35px;
+            left:140px;
+            } 
+            @include media-breakpoint-up(xl){
+              top:-35px;
+              left:185px;
+              } 
            }
            &.group3{
-             position: relative;
-             top:140px;
-             left:95px;
-             z-index: 1;
+            z-index: 1;
+            @include media-breakpoint-up(lg){
+              top:115px;
+              left:70px;
+            }
+
+            @include media-breakpoint-up(xl){
+              top:140px;
+              left:95px;
+            }
+             
            }
            &.group4{
-             position: relative;
-             top:20px;
-             left:150px;
-             z-index: -1;
+            z-index: -1;
+            @include media-breakpoint-up(lg){
+              top:0;
+              left:150px;
+            }
+            @include media-breakpoint-up(xl){
+              top:20px;
+              left:150px;
+            }
            }
         }
        
@@ -555,6 +585,11 @@ body{
       position: relative;
       bottom: 240px;
       left:223px; 
+     }
+     @include media-breakpoint-up(md) {
+      position: relative;
+      bottom: 240px;
+      left:0; 
      }
     }  
     }
@@ -854,36 +889,54 @@ body{
     }
     .btncart{
         background-color: #000000;
-        border: none;
         color: #ffffff;
-        text-align: center;
-        text-decoration: none;
+        max-width: 170px;
+        width: 100%;
+        height: 40px;
+        font-size: 15px;
         border-radius: 0;
         margin-top: 21px;
-        text-shadow: none;
-        text-transform: uppercase;
-        max-width: 243px;
         width: 100%;
-        height: 57px;
-        font-size: 20px;
-        width: 100%;
+        @include media-breakpoint-up(sm){
+          border: none;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 0;
+          margin-top: 21px;
+          text-shadow: none;
+          text-transform: uppercase;
+          max-width: 243px;
+          width: 100%;
+          height: 57px;
+          font-size: 20px;
+          width: 100%;
+        }
     }
     .btnwish{
-        background-color: #ECECEC;
-        border: none;
-        color: #000000;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 0;
-        margin-top: 21px;
-        text-shadow: none;
-        text-transform: uppercase;
-        max-width: 243px;
-        width: 100%;
-        height: 57px;
-        font-size: 20px;
-        width: 100%;
-        padding-left: 15px;
+         background-color: #ECECEC;
+         color: #000000;
+         border-radius: 0;
+         margin-top: 21px;
+         max-width: 170px;
+         width: 100%;
+         height: 40px;
+         font-size: 15px;
+         width: 100%;
+        @include media-breakpoint-up(sm){
+          border: none;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 0;
+          margin-top: 21px;
+          text-shadow: none;
+          text-transform: uppercase;
+          max-width: 243px;
+          width: 100%;
+          height: 57px;
+          font-size: 20px;
+          width: 100%;
+          padding-left: 15px;
+        }
         @include media-breakpoint-up(sm){
           margin-left:20px;
         }
@@ -986,6 +1039,13 @@ body{
         font-family: futura-pt normal,sans-serif;
         font-weight: 500;
         }
+        @include media-breakpoint-up(md){
+          font-size: 15px;
+          padding-top: 17px;
+          font-family: futura-pt normal,sans-serif;
+          font-weight: 500;
+          }
+
       }
       .readblog{
         border: 1px solid #000000;
@@ -996,10 +1056,10 @@ body{
         margin-top: 27px;
         text-shadow: none;
         text-transform: uppercase;
-        max-width: 145px;
+        max-width: 120px;
         width: 100%;
-        height: 45px;
-        font-size: 14px;
+        height: 35px;
+        font-size: 12px;
         width: 100%;
         @include media-breakpoint-up(sm){
         border: 1px solid #000000;
@@ -1067,28 +1127,42 @@ body{
         font-weight: bold;
       }
       .subscribe{
-        font-size: 33px;
-        color:#FFFFFF;
-        text-transform: uppercase;
-        font-family: futura-pt normal,sans-serif;
-        font-weight: 500;
-        //padding-left: 87px;
+           color:#FFFFFF;
+           font-size: 24px;
+           font-family: futura-pt normal,sans-serif;
+          font-weight: 500;
+        @include media-breakpoint-up(sm){
+          font-size: 33px;
+          text-transform: uppercase;
+          font-family: futura-pt normal,sans-serif;
+          font-weight: 500;
+        }
       }
       p{
-        //padding: 25px 0 0 87px;
         color:#FFFFFF;
-        font-size:18px;
+        font-size: 15px;
         font-family: futura-pt normal,sans-serif;
+        @include media-breakpoint-up(sm){
+          font-size:18px;
+        }
       }
       .subscribe-box{
         //padding: 100px 0 0 80px;
         .subname{
-          border-radius: 0;
-          background-color: #FFFFFF;
-          border: 2px solid #EDEDED;
-          max-width: 439px;
-          width: 100%;
-          height: 58px;
+            border-radius: 0;
+            background-color: #FFFFFF;
+            border: 2px solid #EDEDED;
+            max-width: 439px;
+            width: 100%;
+            height: 40px;
+          @include media-breakpoint-up(sm){
+            border-radius: 0;
+            background-color: #FFFFFF;
+            border: 2px solid #EDEDED;
+            max-width: 439px;
+            width: 100%;
+            height: 58px;
+          }
         }
         .subemail{
           margin-top:20px;
@@ -1097,25 +1171,45 @@ body{
           border: 2px solid #EDEDED;
           max-width: 439px;
           width: 100%;
+          height: 40px;
+          @include media-breakpoint-up(sm){
+          margin-top:20px;
+          border-radius: 0;
+          background-color: #FFFFFF;
+          border: 2px solid #EDEDED;
+          max-width: 439px;
+          width: 100%;
           height: 58px;
+          }
         }
         .btnsub{
-        background-color: #000000;
-        color: #FFFFFF;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 0;
-        margin-top: 27px;
-        text-shadow: none;
-        text-transform: uppercase;
-        max-width: 438px;
-        width: 100%;
-        height: 56px;
-        font-size: 16px;
-        width: 100%;
+          background-color: #000000;
+          color: #FFFFFF;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 0;
+          margin-top: 27px;
+          text-shadow: none;
+          text-transform: uppercase;
+          max-width: 438px;
+          width: 100%;
+          height: 40px;
+          font-size: 16px;
+        @include media-breakpoint-up(sm){
+          text-align: center;
+          text-decoration: none;
+          border-radius: 0;
+          margin-top: 27px;
+          text-shadow: none;
+          text-transform: uppercase;
+          max-width: 438px;
+          width: 100%;
+          height: 56px;
+          font-size: 16px;
+        }
         }
       }
-    }  
+     }  
     }  
     }
   }
